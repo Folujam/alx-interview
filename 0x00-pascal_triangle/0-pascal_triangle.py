@@ -16,10 +16,10 @@ def pascal_triangle(n):
 
             # join row to the ptriangle
             triangle.append(row)
-            return triangle
+        return triangle
 
 # Main function
-if __name__ == "main":
+if __name__ == "__main__":
     def print_triangle(triangle):
         for row in triangle:
             print("[{}]".format(",".join([str(x) for x in row])))
