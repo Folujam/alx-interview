@@ -16,9 +16,17 @@ def pascal_triangle(n):
 
             # Fill other values
             for j in range(1, i):
-                row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+                # Get the two numbers from the previous row
+                left_num = triangle[i - 1][j - 1]
+                right_num = triangle[i - 1][j]
 
-            # join row to the ptriangle
+                # Add them together to get the new number
+                new_num = left_num + right_num
+
+                # Update the current position in the row with the new number
+                row[j] = new_num
+
+            # Add the completed row to the triangle
             triangle.append(row)
         return triangle
 
