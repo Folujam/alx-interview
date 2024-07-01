@@ -1,7 +1,11 @@
 #!/usr/bin/python3
+"""The pascals triangle module"""
 
 
 def pascal_triangle(n):
+    """
+    This algorithm builds a pascals triangle n times
+    """
     triangle = []
     if n <= 0:
         return triangle
@@ -18,8 +22,11 @@ def pascal_triangle(n):
             triangle.append(row)
         return triangle
 
-# Main function
-if __name__ == "__main__":
+
+if __name__ == "__main__":  # Main function
+    """
+    main tests n=5
+    """
     def print_triangle(triangle):
         for row in triangle:
             print("[{}]".format(",".join([str(x) for x in row])))
