@@ -2,13 +2,15 @@
 """Log parsing Module"""
 import sys
 
-#script reads from stdin line by line (p.u. readline())
-#with sys.stdin.readline():
-#    if 
-#if line != format skip
-#after 10lines/signal(ctrl+C) print
-   #total file size = all read file sizes sumed
-   # implement status code (must be integer) - <sc>: <num> (printed ascd order) 
+
+#  script reads from stdin line by line (p.u. readline())
+#  with sys.stdin.readline():
+#  if
+#  if line != format skip
+#  after 10lines/signal(ctrl+C) print
+#  total file size = all read file sizes sumed
+#  implement status code (must be integer) -
+#  <sc>: <num> (printed ascd order)
 def print_msg(dict_sc, total_file_size):
     print("File size: {}".format(total_file_size))
     for key, val in sorted(dict_sc.items()):
