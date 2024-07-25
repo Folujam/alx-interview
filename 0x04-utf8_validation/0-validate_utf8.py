@@ -4,11 +4,15 @@
 
 def validUTF8(data):
     """validates data to be utf8 encoded
-    -Check if the first bit of the byte is 0. If it is, then it's a 1-byte character.
-    -If the first bit is 1, count how many consecutive 1s there are from the start.
+    -Check if the first bit of the byte is 0. If it is,
+    then it's a 1-byte character.
+    -If the first bit is 1,
+    count how many consecutive 1s there are from the start.
     This will tell you how many bytes the character takes up.
-    -For the next n-1 bytes (where n is the number of bytes the character takes up),
-    check if the first two bits are 10. If they're not, then it's not a valid UTF-8 character.
+    -For the next n-1 bytes
+    (where n is the number of bytes the character takes up),
+    check if the first two bits are 10. If they're not,
+    then it's not a valid UTF-8 character.
     """
     # init vars then check if the first bit of byte is 0
     i = 0
@@ -19,7 +23,7 @@ def validUTF8(data):
             continue  # skips if its 0,, meaning its a byte is 1
         else:
             count = 0
-            #if its not 0
+            # if its not 0
             while (data[i] & 0b10000000) != 0:
                 count += 1
                 data_shifted.append(data[i] << 1)
