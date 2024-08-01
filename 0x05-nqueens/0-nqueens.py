@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" N queens
+"""Nqueens Module"""
 import sys
 
 
-if len(sys.argv) > 2 or len(sys.argv) < 2:
+if len(sys.argv) is not 2:
     print("Usage: nqueens N")
     exit(1)
 
@@ -42,4 +42,3 @@ def solve(n):
 
 
 solve(n)
-"""
