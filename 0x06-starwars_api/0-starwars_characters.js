@@ -2,7 +2,6 @@
 
 const request = require('request');
 
-//connect to star-wars api
 request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], function (err, body) {
   if (err) throw err;
   const charactars = JSON.parse(body).characters;
