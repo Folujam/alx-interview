@@ -1,6 +1,5 @@
 #!/usr/bin/node
 
-//use request Module
 const request = require('request');
 
 //connect to star-wars api
