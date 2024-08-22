@@ -16,7 +16,7 @@ def makeChange(coins, total):
 
     This solution has a runtime of O(total * len(coins)),
     making it efficient for large inputs.
-    """
+    
     # coins: a list of values of coins in possession
     # Create a list to store the minimum number of coins for each amount
     dp = [float('inf')] * (total + 1)
@@ -30,4 +30,14 @@ def makeChange(coins, total):
             dp[i] = min(dp[i], dp[i - coin] + 1)
 
     # Return the minimum number of coins for the total amount
+    return dp[total] if dp[total] != float('inf') else -1
+    """
+    dp = [float('inf')] * (total + 1)
+    dp[0] = 0
+
+    for i in range(1, total + 1):
+        for coin in coins:
+            if i >= coin:
+                dp[i] = min(dp[i], dp[i - coin] + 1)
+
     return dp[total] if dp[total] != float('inf') else -1
