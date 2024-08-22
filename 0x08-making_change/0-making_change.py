@@ -16,7 +16,7 @@ def makeChange(coins, total):
 
     This solution has a runtime of O(total * len(coins)),
     making it efficient for large inputs.
-    
+
     # coins: a list of values of coins in possession
     # Create a list to store the minimum number of coins for each amount
     dp = [float('inf')] * (total + 1)
